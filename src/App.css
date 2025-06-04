@@ -1,0 +1,27 @@
+#firstheading{
+  font-size: xx-large;
+}
+#secondheading{
+  font-size: xx-large;
+}
+
+@media screen and (max-width:594px){
+  #firstheading{
+  font-size: x-large;
+}
+#secondheading{
+  font-size: x-large;
+}
+}
+
+
+@media screen and (max-width:507px){
+  #firstheading{
+  font-size: large;
+}
+#secondheading{
+  font-size: large;
+}
+}
+
+
