@@ -4,6 +4,16 @@
 #secondheading{
   font-size: xx-large;
 }
+#registrationheading{
+  color: rgb(228, 228, 63);
+  background-color: rgb(16, 94, 143);
+  font-weight: bold;
+  font-size: x-large;
+
+}
+.inputlabels{
+  font-size: x-large;
+}
 
 @media screen and (max-width:594px){
   #firstheading{
@@ -11,6 +21,12 @@
 }
 #secondheading{
   font-size: x-large;
+}
+#registrationheading{
+  font-size: large;
+}
+.inputlabels{
+  font-size: larger;
 }
 }
 
@@ -21,6 +37,12 @@
 }
 #secondheading{
   font-size: large;
+}
+#registrationheading{ 
+  font-size: medium;
+}
+.inputlabels{
+  font-size: 14px;
 }
 }
 
