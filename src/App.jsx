@@ -5,11 +5,11 @@ function App() {
 
   return (
     <>
-     <div className='container-fluid d-flex justify-content-center align-items-center'>
-      <div className="row p-2" style={{height:"100vh"}}>
+     <div className='container-fluid d-flex justify-content-center align-items-center pt-4 pb-4'>
+      <div className="row p-2" >
         <div className="col-md-3"></div>
-        <div className="col-md-6">
-          <div className='p-lg-3 p-2 bg-warning'>
+        <div className="col-md-6 ">
+          <div className='p-lg-3 p-2 bg-light ' style={{boxShadow:"0px 0px 40px grey"}}>
             
             {/* header section */}
             <div className='conatiner-fluid'>
@@ -42,12 +42,12 @@ function App() {
             </div>
 
              <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+              <div className="col-4"><span className='inputlabels'>Father's Name : </span></div>
               <div className="col-8"> <input type="text" className='form-control' /></div>
             </div>
 
             <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+              <div className="col-4"><span className='inputlabels'>Mother's Name : </span></div>
               <div className="col-8"> <input type="text" className='form-control' /></div>
             </div>
 
@@ -56,20 +56,20 @@ function App() {
             <div className="row">
               <div className="col-6">
                 <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+              <div className="col-4"><span className='inputlabels'>DOB : </span></div>
               <div className="col-8"> <input type="date" className='form-control' /></div>
             </div>
               </div>
               <div className="col-6">
-                <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
-              <div className="col-8"> <input type="radio"  name='gender' /> <span className='inputlabels'>Student's Name : </span> <input type="radio"  name='gender' /> <span className='inputlabels'>Student's Name : </span> </div>
+                <div className=" mt-lg-3 mt-2 d-flex justify-content-around">
+              <div className=""><span className='inputlabels'>Gender: </span></div>
+              <div className=""> <input type="radio"  name='gender' /> <span className='inputlabels'>Male </span> <input type="radio"  name='gender' /> <span className='inputlabels'>Female  </span> </div>
             </div>
               </div>
             </div>
 
             <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+              <div className="col-4"><span className='inputlabels'>Permanent Address : </span></div>
               <div className="col-8"> <textarea name="" id="" className='form-control'></textarea></div>
             </div>
 
@@ -79,14 +79,14 @@ function App() {
             <div className="row">
               <div className="col-6">
                 <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+              <div className="col-4"><span className='inputlabels'>Religion : </span></div>
               <div className="col-8"> <input type="text" className='form-control' /></div>
             </div>
               </div>
               <div className="col-6">
                 <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
-              <div className="col-8"> <input type="text" className='form-control' /> </div>
+              <div className="col-6"><span className='inputlabels'>Nationality : </span></div>
+              <div className="col-6"> <input type="text" className='form-control' /> </div>
             </div>
               </div>
             </div>
@@ -94,26 +94,23 @@ function App() {
              <div className="row">
               <div className="col-6">
                 <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+              <div className="col-4"><span className='inputlabels'>Phone : </span></div>
               <div className="col-8"> <input type="text" className='form-control' /></div>
             </div>
               </div>
               <div className="col-6">
                 <div className="row mt-lg-3 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
-              <div className="col-8"> <input type="text" className='form-control' /> </div>
+              <div className="col-6"><span className='inputlabels'>Blood Group : </span></div>
+              <div className="col-6"> <input type="text" className='form-control' /> </div>
             </div>
               </div>
             </div>
 
 
-            <div className="row mt-lg-4 mt-2">
-              <div className="col-4"><span className='inputlabels'>Student's Name : </span></div>
+            <div className="row mt-lg-4 mt-2 mb-4">
+              <div className="col-4"><span className='inputlabels'>Email Id : </span></div>
               <div className="col-8"> <input type="text" className='form-control' /></div>
-            </div>
-
-           
-            
+            </div>  
           </div>
         </div>
         <div className="col-md-3"></div>
