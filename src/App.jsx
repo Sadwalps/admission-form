@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import './bootstrap.min.css'
 function App() {
- 
+  const [preview, setPreview] = useState("")
   const [admissiondetails, setAdmissiondetails] = useState({
     name:"",
     fname:"",
     mname:"",
-    dob:"",
-    gender:"",
+    dob:"", 
     address:"",
     religion:"",
     nationality:"",
@@ -25,7 +24,6 @@ function App() {
     fname:"",
     mname:"",
     dob:"",
-    gender:"",
     address:"",
     religion:"",
     nationality:"",
@@ -34,14 +32,28 @@ function App() {
     email:"",
     profilepic:""
     })
+    setPreview("")
   }
 
-  const handleFile = (e)=>{
-    console.log(e);
-   
-  
-    
+
+  const handleSubmit = ()=>{
+    const { name, fname,mname,dob,address,religion,nationality,phone,bgroup,email,profilepic} = admissiondetails
+    if(!name || !fname || !mname || !dob  || !address || !religion || !nationality || !phone || !bgroup || !email || !profilepic){
+      alert(`Fill the form Completely`)
+    }else{
+      alert(`Successfully submitted`)
+      handleCancel()
+    }
   }
+
+  const handleFile = (e)=>{ 
+     setAdmissiondetails({...admissiondetails,profilepic:e.target.files[0]})
+  }
+  useEffect(()=>{
+    if(admissiondetails.profilepic){
+      setPreview(URL.createObjectURL(admissiondetails.profilepic))
+    }
+  },[admissiondetails.profilepic])
 
   return (
     <>
@@ -64,7 +76,7 @@ function App() {
                 <div className="col-2 d-flex justify-content-center align-items-center">
                   <label htmlFor="profile" style={{cursor:"pointer"}}>
                     <input type="file" id='profile' onChange={(e)=>handleFile(e)} style={{display:"none"}} />
-                  <img src="https://th.bing.com/th/id/OIP.akxWriHVa_jvHL3x6oRevQAAAA?r=0&cb=thvnextc1&rs=1&pid=ImgDetMain" className='w-100 shadow' alt="" />
+                  <img src={preview? preview:"https://th.bing.com/th/id/OIP.akxWriHVa_jvHL3x6oRevQAAAA?r=0&cb=thvnextc1&rs=1&pid=ImgDetMain"} className='w-100 shadow' alt="" />
                   </label>
                 </div>
               </div>
@@ -93,26 +105,15 @@ function App() {
 
             {/* next part */}
 
-            <div className="row">
-              <div className="col-6">
                 <div className="row mt-lg-3 mt-2">
               <div className="col-4"><span className='inputlabels'>DOB : </span></div>
               <div className="col-8"> <input type="date" value={admissiondetails.dob} onChange={(e)=>setAdmissiondetails({...admissiondetails,dob:e.target.value})} className='form-control' /></div>
             </div>
-              </div>
-              <div className="col-6">
-                <div className=" mt-lg-3 mt-2 d-flex justify-content-around">
-              <div className=""><span className='inputlabels'>Gender: </span></div>
-              <div className=""> <input type="radio" value={admissiondetails.gender} onChange={(e)=>setAdmissiondetails({...admissiondetails,gender:e.target.value})}  name='genderr' /> <span className='inputlabels'>Male </span> <input type="radio" value={admissiondetails.gender} onChange={(e)=>setAdmissiondetails({...admissiondetails,gender:e.target.value})}  name='genderr' /> <span className='inputlabels'>Female  </span> </div>
-            </div>
-              </div>
-            </div>
-
+              
             <div className="row mt-lg-3 mt-2">
               <div className="col-4"><span className='inputlabels'>Permanent Address : </span></div>
               <div className="col-8"> <textarea name="" id="" value={admissiondetails.address} onChange={(e)=>setAdmissiondetails({...admissiondetails,address:e.target.value})} className='form-control'></textarea></div>
             </div>
-
 
             {/* next part */}
 
@@ -153,7 +154,7 @@ function App() {
             </div>
 
             <div className='d-flex justify-content-around mt-4 mb-4'>
-              <button className='px-3 py-2 btn btn-success'>Submit</button>
+              <button className='px-3 py-2 btn btn-success' onClick={handleSubmit}>Submit</button>
               <button className='px-3 py-2 btn btn-danger' onClick={handleCancel}>Cancel</button></div>  
           </div>
         </div>
