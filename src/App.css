@@ -12,7 +12,7 @@
 
 }
 .inputlabels{
-  font-size: x-large;
+  font-size: large;
 }
 
 
@@ -27,7 +27,7 @@
   font-size: large;
 }
 .inputlabels{
-  font-size: larger;
+  font-size: 14px;
 }
 }
 
@@ -43,7 +43,7 @@
   font-size: medium;
 }
 .inputlabels{
-  font-size: 14px;
+  font-size: 10px;
 }
 }
 
